@@ -32,7 +32,7 @@ export default (sequence, callback) => {
       .pluck('value')
       .bufferWithCount(sequence.length, 1)
       .filter(x => x.toString() === pattern)
-      .subscribeOnNext(callback)
+      .subscribeOnNext(callback);
 
   return sub.dispose.bind(sub);
 };
