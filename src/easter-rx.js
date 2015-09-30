@@ -4,7 +4,6 @@ const source = Rx.Observable.fromEvent(window, 'keyup');
 const gap = { gap: true };
 const delay = 500;
 
-
 export default (sequence, callback) => {
   const pattern = sequence.toString();
 
@@ -19,7 +18,7 @@ export default (sequence, callback) => {
         switch (true) {
           case buf[0].gap:
             ret = Rx.Observable.fromArray(buf);
-            break
+            break;
           case buf[1].interval > delay:
             ret = Rx.Observable.of(Object.create(gap), buf[1]);
             break;
