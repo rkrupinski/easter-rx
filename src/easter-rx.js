@@ -1,5 +1,3 @@
-'use strict';
-
 const source = Rx.Observable.fromEvent(window, 'keyup');
 const gap = { gap: true };
 const delay = 500;
